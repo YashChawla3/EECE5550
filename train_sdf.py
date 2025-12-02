@@ -35,10 +35,10 @@ os.makedirs('models', exist_ok=True)
 
 device = torch.device('mps', 0)
 tensor_args = {'device': device, 'dtype': torch.float32}
-#q_dof = 7
-#data = torch.load('datasets/%d_dof_data.pt' % q_dof).to(**tensor_args)
-q_dof = 2
-data = torch.load('/Users/yash/Documents/Northeastern/EECE5550/Project /Code/OptimalModulationDS-master/python_scripts/mlp_learn/datasets/2d_toy_data.pt').to(**tensor_args)
+q_dof = 7
+data = torch.load('/Users/yash/Documents/Northeastern/EECE5550/Project /Code/OptimalModulationDS-master/python_scripts/mlp_learn/datasets/%d_dof_data.pt' % q_dof).to(**tensor_args)
+#q_dof = 2
+#data = torch.load('/Users/yash/Documents/Northeastern/EECE5550/Project /Code/OptimalModulationDS-master/python_scripts/mlp_learn/datasets/2d_toy_data.pt').to(**tensor_args)
 #data = torch.load('/Users/yash/Documents/Northeastern/EECE5550/Project /Code/OptimalModulationDS-master/python_scripts/mlp_learn/models/2dof_sdf_256x5_mesh.pt').to(**tensor_args)
 
 # data = data[0:1000000]
